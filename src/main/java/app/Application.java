@@ -4,11 +4,19 @@ import io.github.humbleui.jwm.*;
 
 import java.util.function.Consumer;
 
+/**
+ * класс приложения
+ */
 public class Application implements Consumer<Event> {
     // окно приложения
+    /**
+     * окно приложения
+     */
     private final Window window;
 
-    // конструктор приложения
+    /**
+     * конструктор приложения
+     */
     public Application() {
         // создаём окно
         window = App.makeWindow();
@@ -18,7 +26,12 @@ public class Application implements Consumer<Event> {
         window.setVisible(true);
     }
 
-    // обработчик событий
+
+
+    /**
+     * Обработчик событий
+     * @param e событие
+     */
     @Override
     public void accept(Event e) {
         // если событие - это закрытие окна
