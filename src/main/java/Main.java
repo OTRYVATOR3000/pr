@@ -5,6 +5,7 @@ import io.github.humbleui.jwm.App;
  * главный метод
  */
 public class Main {
+
     /**
      * главный класс
      * @param args аргументы командной строки
@@ -12,6 +13,7 @@ public class Main {
     public static void main(String[] args) {
 
         App.start(Application ::new);
+
     }
 
 }
