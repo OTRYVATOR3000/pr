@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3bb38df0-1630-4534-bdbb-6ab4ade371c2" name="Changes" comment="add task classes" />
+    <list default="true" id="3bb38df0-1630-4534-bdbb-6ab4ade371c2" name="Changes" comment="float cs">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/Task.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/misc/CoordinateSystem2i.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/misc/CoordinateSystem2i.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -76,7 +80,7 @@
       <workItem from="1670488318289" duration="860000" />
       <workItem from="1673515148913" duration="1048000" />
       <workItem from="1675068451702" duration="2298000" />
-      <workItem from="1676536571057" duration="3158000" />
+      <workItem from="1676536571057" duration="4033000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1669283798503</created>
@@ -127,7 +131,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676539824318</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="float cs">
+      <created>1676539950540</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1676539950540</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -152,6 +163,7 @@
     <MESSAGE value="text centering works" />
     <MESSAGE value="4 panels" />
     <MESSAGE value="add task classes" />
-    <option name="LAST_COMMIT_MESSAGE" value="add task classes" />
+    <MESSAGE value="float cs" />
+    <option name="LAST_COMMIT_MESSAGE" value="float cs" />
   </component>
 </project>
