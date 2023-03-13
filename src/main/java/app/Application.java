@@ -61,13 +61,6 @@ public class Application implements Consumer<Event> {
     public Application() {
         // создаём окно
         window = App.makeWindow();
-        // создаём первый заголовок
-
-        // задаём обработчиком событий текущий объект
-        window.setEventListener(this);
-
-        window.setVisible(true);
-        window.setTitle("Java 2D");
 
         // создаём панель рисования
         panelRendering = new PanelRendering(
@@ -89,6 +82,13 @@ public class Application implements Consumer<Event> {
                 window, true, PANEL_BACKGROUND_COLOR, PANEL_PADDING, 5, 3, 3, 2,
                 2, 1
         );
+        // создаём первый заголовок
+
+        // задаём обработчиком событий текущий объект
+        window.setEventListener(this);
+
+        window.setVisible(true);
+        window.setTitle("Java 2D");
 
         // делаем окно видимым
         // задаём размер окна
@@ -161,5 +161,8 @@ public class Application implements Consumer<Event> {
             // очищаем её канвас заданным цветом
             paint(s.getCanvas(), new CoordinateSystem2i(s.getWidth(), s.getHeight()));
         }
+        panelControl.accept(e);
+        panelRendering.accept(e);
+        panelLog.accept(e);
     }
 }
