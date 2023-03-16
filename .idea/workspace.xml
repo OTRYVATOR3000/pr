@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3bb38df0-1630-4534-bdbb-6ab4ade371c2" name="Changes" comment="adding points works">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/Task.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/misc/Misc.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/misc/Misc.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/panels/PanelLog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/panels/PanelLog.java" afterDir="false" />
-    </list>
+    <list default="true" id="3bb38df0-1630-4534-bdbb-6ab4ade371c2" name="Changes" comment="log works" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -83,7 +78,7 @@
       <workItem from="1675068451702" duration="2298000" />
       <workItem from="1676536571057" duration="4033000" />
       <workItem from="1678699902638" duration="1796000" />
-      <workItem from="1678954872601" duration="1560000" />
+      <workItem from="1678954872601" duration="1878000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1669283798503</created>
@@ -148,7 +143,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678701601710</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="log works">
+      <created>1678956450632</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1678956450632</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -175,6 +177,7 @@
     <MESSAGE value="add task classes" />
     <MESSAGE value="float cs" />
     <MESSAGE value="adding points works" />
-    <option name="LAST_COMMIT_MESSAGE" value="adding points works" />
+    <MESSAGE value="log works" />
+    <option name="LAST_COMMIT_MESSAGE" value="log works" />
   </component>
 </project>
