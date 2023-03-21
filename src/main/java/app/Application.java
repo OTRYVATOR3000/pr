@@ -131,6 +131,7 @@ public class Application implements Consumer<Event> {
         if (window._layer == null)
             throw new RuntimeException("Нет доступных слоёв для создания");
 
+
     }
 
     /**
