@@ -2,6 +2,7 @@ package app;
 
 import controls.InputFactory;
 import controls.Label;
+import dialogs.PanelInfo;
 import io.github.humbleui.jwm.*;
 import io.github.humbleui.jwm.skija.EventFrameSkija;
 import io.github.humbleui.skija.Canvas;
@@ -18,13 +19,16 @@ import panels.PanelRendering;
 import java.io.File;
 import java.util.function.Consumer;
 
-import static app.Colors.APP_BACKGROUND_COLOR;
-import static app.Colors.PANEL_BACKGROUND_COLOR;
+import static app.Colors.*;
 
 /**
  * класс приложения
  */
 public class Application implements Consumer<Event> {
+    /**
+     * Панель информации
+     */
+    private final PanelInfo panelInfo;
     /**
      * флаг того, что окно развёрнуто на весь экран
      */
@@ -91,6 +95,8 @@ public class Application implements Consumer<Event> {
                 window, true, PANEL_BACKGROUND_COLOR, PANEL_PADDING, 5, 3, 3, 2,
                 2, 1
         );
+        // панель информации
+        panelInfo = new PanelInfo(window, true, DIALOG_BACKGROUND_COLOR, PANEL_PADDING);
         // создаём первый заголовок
 
         // задаём обработчиком событий текущий объект
@@ -150,6 +156,11 @@ public class Application implements Consumer<Event> {
         panelControl.paint(canvas, windowCS);
         panelLog.paint(canvas, windowCS);
         panelHelp.paint(canvas, windowCS);
+        // рисуем диалоги
+        switch (currentMode) {
+            case INFO -> panelInfo.paint(canvas, windowCS);
+            case FILE -> {}
+        }
         canvas.restore();
     }
     /**
@@ -196,10 +207,16 @@ public class Application implements Consumer<Event> {
                 else
                     switch (eventKey.getKey()) {
                         case ESCAPE -> {
-                            window.close();
-                            // завершаем обработку, иначе уже разрушенный контекст
-                            // будет передан панелям
-                            return;
+                            // если сейчас основной режим
+                            if (currentMode.equals(Mode.WORK)) {
+                                // закрываем окно
+                                window.close();
+                                // завершаем обработку, иначе уже разрушенный контекст
+                                // будет передан панелям
+                                return;
+                            } else if (currentMode.equals(Mode.INFO)) {
+                                currentMode = Mode.WORK;
+                            }
                         }
                         case TAB -> InputFactory.nextTab();
 
@@ -210,5 +227,39 @@ public class Application implements Consumer<Event> {
         panelControl.accept(e);
         panelRendering.accept(e);
         panelLog.accept(e);
+
+        switch (currentMode) {
+            case INFO -> panelInfo.accept(e);
+            case FILE -> {}
+            case WORK -> {
+                // передаём события на обработку панелям
+                panelControl.accept(e);
+                panelRendering.accept(e);
+                panelLog.accept(e);
+            }
+        }
     }
+    /**
+     * Режимы работы приложения
+     */
+    public enum Mode {
+        /**
+         * Основной режим работы
+         */
+        WORK,
+        /**
+         * Окно информации
+         */
+        INFO,
+        /**
+         * работа с файлами
+         */
+        FILE
+    }
+    /**
+     * Текущий режим(по умолчанию рабочий)
+     */
+    public static Mode currentMode = Mode.WORK;
+
+
 }
