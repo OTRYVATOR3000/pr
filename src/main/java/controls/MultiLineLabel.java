@@ -2,6 +2,7 @@ package controls;
 
 import io.github.humbleui.jwm.Window;
 import io.github.humbleui.skija.Canvas;
+import io.github.humbleui.skija.Font;
 import io.github.humbleui.skija.Paint;
 import io.github.humbleui.skija.TextLine;
 import misc.CoordinateSystem2i;
@@ -34,7 +35,7 @@ public class MultiLineLabel extends GridPanel {
      * Флаг, нужно ли выравнивать текст по центру по вертикали
      */
     protected boolean vcentered;
-
+    Font font;
     /**
      * Панель на сетке
      *
@@ -55,10 +56,11 @@ public class MultiLineLabel extends GridPanel {
     public MultiLineLabel(
             Window window, boolean drawBG, int backgroundColor, int padding, int gridWidth,
             int gridHeight, int gridX, int gridY, int colspan, int rowspan, String text,
-            boolean centered, boolean vcentered) {
+            boolean centered, boolean vcentered, Font font) {
         super(window, drawBG, backgroundColor, padding, gridWidth, gridHeight,
                 gridX, gridY, colspan, rowspan);
         this.text = text;
+        this.font = font;
         this.centered = centered;
         this.vcentered = vcentered;
     }
@@ -74,7 +76,7 @@ public class MultiLineLabel extends GridPanel {
         // сохраняем области рисования
         canvas.save();
         // высота текста
-        int capHeight = (int) FONT12.getMetrics().getCapHeight();
+        int capHeight = (int) font.getMetrics().getCapHeight();
         // говорим, что первая y координата - это высота текста
         int y = capHeight;
         // начальное значение для последней сохранённой высоты
@@ -86,7 +88,7 @@ public class MultiLineLabel extends GridPanel {
         // перебираем строки текста
         for (String lineText : text.split("\n")) {
             // создаём линию как объект рисования
-            try (TextLine line = TextLine.make(lineText, FONT12)) {
+            try (TextLine line = TextLine.make(lineText, font)) {
                 // последняя сохранённая ширина будет равна максимальной ширине строки
                 lastTextWidth = Math.max((int) line.getWidth() + 2 * padding, lastTextWidth);
             }
@@ -107,7 +109,7 @@ public class MultiLineLabel extends GridPanel {
             // перебираем строки текста
             for (String lineText : text.split("\n")) {
                 // создаём линию как объект рисования
-                try (TextLine line = TextLine.make(lineText, FONT12)) {
+                try (TextLine line = TextLine.make(lineText, font)) {
                     // рисуем линию
                     canvas.save();
 

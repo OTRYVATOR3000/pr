@@ -1,6 +1,7 @@
 package dialogs;
 
 import app.Application;
+import app.Fonts;
 import controls.Button;
 import controls.Input;
 import controls.Label;
@@ -90,7 +91,7 @@ public class PanelSelectFile extends Panel {
         // добавление вручную
         infoLabel = new MultiLineLabel(window, false, backgroundColor, CONTROL_PADDING,
                 6, 5, 2, 0, 2, 1, "",
-                true, true);
+                true, true, Fonts.FONT12);
 
 
         listPanel = new PanelList(window, false, APP_BACKGROUND_COLOR, CONTROL_PADDING,
@@ -111,14 +112,14 @@ public class PanelSelectFile extends Panel {
         accept = new Button(
                 window, false, BUTTON_COLOR, CONTROL_PADDING,
                 6, 5, 2, 3, 1, 1, "ОК",
-                true, true);
+                true, true, Fonts.FONT12);
 
         accept.setOnClick(PanelSelectFile::accept);
 
         cancel = new Button(
                 window, false, BUTTON_COLOR, CONTROL_PADDING,
                 6, 5, 3, 3, 1, 1, "Отмена",
-                true, true);
+                true, true, Fonts.FONT12);
 
         cancel.setOnClick(() -> Application.currentMode = Application.Mode.WORK);
 

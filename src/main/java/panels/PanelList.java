@@ -1,5 +1,6 @@
 package panels;
 
+import app.Fonts;
 import controls.Button;
 import io.github.humbleui.jwm.*;
 import io.github.humbleui.skija.Canvas;
@@ -86,7 +87,7 @@ public class PanelList extends GridPanel {
             Button elem = new Button(
                     window, false, BUTTON_COLOR, LIST_PADDING,
                     1, renderLineCnt, 0, i, 1, 1, "",
-                    false, true);
+                    false, true, Fonts.FONT12);
             // по клику кнопки в обработчик возвращаем её текст
             elem.setOnClick(() -> lineConsumer.accept(elem.text));
             buttons.add(elem);

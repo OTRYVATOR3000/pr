@@ -82,7 +82,7 @@ public class Input extends GridPanel {
                 canvas.translate(0, (windowCS.getSize().y - INPUT_SIZE) / 2.0f);
             }
             // рисуем скруглённый квадрат
-            canvas.drawRRect(RRect.makeXYWH(0, 0, windowCS.getSize().x, INPUT_SIZE, 4), paint);
+            canvas.drawRRect(RRect.makeXYWH(0, (int)(INPUT_SIZE*0.2), windowCS.getSize().x,  (int)(INPUT_SIZE*0.8), 4), paint);
             // начальное положение
             float y = INPUT_SIZE - LOCAL_PADDING - metrics.getDescent();
             // создаём строку для рисования

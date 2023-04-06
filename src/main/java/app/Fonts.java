@@ -14,6 +14,12 @@ public class Fonts {
     public static final Font FONT12 = new Font(FontMgr.getDefault().matchFamilyStyleCharacter(null, FontStyle.NORMAL, null, "↑".codePointAt(0)), 12);
 
     /**
+     * 12 шрифт слишком маленький, поэтому приходится определить его немного по-другому
+     */
+    public static final Font FONT8 = new Font(FontMgr.getDefault().matchFamilyStyleCharacter(null, FontStyle.NORMAL, null, "↑".codePointAt(0)), 8);
+    public static final Font FONT10 = new Font(FontMgr.getDefault().matchFamilyStyleCharacter(null, FontStyle.NORMAL, null, "↑".codePointAt(0)), 9);
+
+    /**
      * 18 шрифт слишком маленький, поэтому приходится определить его немного по-другому
      */
     public static final Font FONT18 = new Font(FontMgr.getDefault().matchFamilyStyle(null, FontStyle.NORMAL), 18);

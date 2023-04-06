@@ -1,6 +1,7 @@
 package dialogs;
 
 import app.Application;
+import app.Fonts;
 import controls.Button;
 import controls.MultiLineLabel;
 import io.github.humbleui.jwm.*;
@@ -52,13 +53,13 @@ public class PanelInfo extends Panel {
         // добавление вручную
         infoLabel = new MultiLineLabel(window, false, backgroundColor, CONTROL_PADDING,
                 1, 2, 0, 0, 1, 1, "",
-                true, true);
+                true, true, Fonts.FONT12);
 
 
         accept = new Button(
                 window, false, BUTTON_COLOR, CONTROL_PADDING,
                 1, 2, 0, 1, 1, 1, "ОК",
-                true, true);
+                true, true, Fonts.FONT12);
         accept.setOnClick(() -> Application.currentMode = Application.Mode.WORK);
 
     }

@@ -3,6 +3,7 @@ package controls;
 import controls.MultiLineLabel;
 import io.github.humbleui.jwm.Window;
 import io.github.humbleui.skija.Canvas;
+import io.github.humbleui.skija.Font;
 import io.github.humbleui.skija.Paint;
 import io.github.humbleui.skija.RRect;
 import io.github.humbleui.types.IRect;
@@ -42,10 +43,10 @@ public class Button extends MultiLineLabel {
     public Button(
             Window window, boolean drawBG, int backgroundColor, int padding,
             int gridWidth, int gridHeight, int gridX, int gridY, int colspan,
-            int rowspan, String text, boolean centered, boolean vcentered) {
+            int rowspan, String text, boolean centered, boolean vcentered, Font font) {
         super(
                 window, drawBG, backgroundColor, padding, gridWidth, gridHeight,
-                gridX, gridY, colspan, rowspan, text, centered, vcentered
+                gridX, gridY, colspan, rowspan, text, centered, vcentered, font
         );
         selected = false;
     }
