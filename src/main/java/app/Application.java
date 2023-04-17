@@ -112,7 +112,7 @@ public class Application implements Consumer<Event> {
 
         // делаем окно видимым
         // задаём размер окна
-        window.setWindowSize(900, 900);
+        window.setWindowSize(1200, 900);
         // задаём его положение
         window.setWindowPosition(100, 100);
         // задаём иконку

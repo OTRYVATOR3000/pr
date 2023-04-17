@@ -89,10 +89,12 @@ public class PanelControl extends GridPanel {
                 FIELD_TEXT_COLOR, true);
         inputs.add(yField);
         buttons = new ArrayList<>();
+
         Button addToFirstSet = new Button(
                 window, false, backgroundColor, PANEL_PADDING,
                 6, cGridHeight, 0, 3, 3, 1, "Добавить в первое\nмножество",
                 true, true, Fonts.FONT12);
+
         addToFirstSet.setOnClick(() -> {
             // если числа введены верно
             if (!xField.hasValidDoubleValue()) {
@@ -104,7 +106,31 @@ public class PanelControl extends GridPanel {
                         new Vector2d(xField.doubleValue(), yField.doubleValue()), Point.PointSet.FIRST_SET
                 );
         });
+
         buttons.add(addToFirstSet);
+
+
+
+        Button addToFirstSet1 = new Button(
+                window, false, backgroundColor, PANEL_PADDING,
+                6, cGridHeight, 1, 6, 4, 1, "Задать первую точку прямоугольника",
+                true, true, Fonts.FONT12);
+
+        addToFirstSet1.setOnClick(() -> {
+
+        });
+
+        buttons.add(addToFirstSet1);
+        Button addToFirstSet2 = new Button(
+                window, false, backgroundColor, PANEL_PADDING,
+                6, cGridHeight, 1, 7, 4, 1, "Случайный прямоугольник",
+                true, true, Fonts.FONT12);
+
+        addToFirstSet2.setOnClick(() -> {
+
+        });
+
+        buttons.add(addToFirstSet2);
 
         Button addToSecondSet = new Button(
                 window, false, backgroundColor, PANEL_PADDING,

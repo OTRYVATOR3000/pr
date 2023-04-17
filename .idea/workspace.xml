@@ -6,15 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="3bb38df0-1630-4534-bdbb-6ab4ade371c2" name="Changes" comment="file open panel">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/Fonts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/Fonts.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/Application.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/app/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/Task.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controls/Button.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controls/Button.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controls/Input.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controls/Input.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controls/MultiLineLabel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controls/MultiLineLabel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dialogs/PanelInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dialogs/PanelInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dialogs/PanelSelectFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dialogs/PanelSelectFile.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/panels/PanelControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/panels/PanelControl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/panels/PanelList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/panels/PanelList.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,6 +110,7 @@
       <workItem from="1678699902638" duration="1796000" />
       <workItem from="1678954872601" duration="1878000" />
       <workItem from="1680768922049" duration="3004000" />
+      <workItem from="1681723299186" duration="2768000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1669283798503</created>
